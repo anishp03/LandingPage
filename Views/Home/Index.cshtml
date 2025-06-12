@@ -1,0 +1,167 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model LandingPage.Models.PurchaseModel
+
+<head>
+    <style>
+        .cardimg{
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<div style="padding-top: 100px;">
+
+</div>
+
+<div class="container-fluid d-flex justify-content-center align-items-center" 
+    style="background-image: url('/Images/HomeBikePic.jpg'); background-size: cover; background-position: center; height: 400px; border-radius: 10px;">
+    <p class="display-5 text-white style" 
+        style="background-color: rgba(0,0,0,0.6); border-radius: 15px; padding: 20px; text-align: center; width: 100%; max-width: 600px;">
+        Premium Bikes For Every Need
+        <a  class="display-5 text-white style" style="font-size: 20px; display: block;" href="#BuyNow">Click Here to Buy Now!</a>
+    </p>
+</div>
+
+
+<div class="card mt-3 shadow-sm p-3 flex-fill flex-column br-2">
+    <h2 class="card-title" id="Products">Products</h2>
+    <div class="card-body d-flex flex-column">
+         <div class="card-text mt-auto">
+
+            <div class="card shadow sm p-3 flex-fill d-flex flex-row br-15 mt-3">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">
+                        Sports Bike
+                    </h5>
+                    <p class="card-text mt-auto">
+                        Lightweight and built for speed, this bike is perfect for fitness rides, road cycling, or daily commuting with performance in mind.
+                    </p>
+                </div>
+                <img class="cardimg" src="/Images/SportsBike.webp">
+            </div>
+
+            <div class="card shadow sm p-3 flex-fill d-flex flex-row br-15 mt-3">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">
+                        Smart Electric Bike
+                    </h5>
+                    <p class="card-text mt-auto">
+                        A modern e-bike with pedal assist and smart features like GPS tracking, making your rides smoother, faster, and more connected.
+                    </p>
+                </div>
+                <img class="cardimg" src="/Images/SmartBike.jpg">
+            </div>
+
+            <div class="card shadow sm p-3 flex-fill d-flex flex-row br-15 mt-3">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">
+                        Phone Mount
+                    </h5>
+                    <p class="card-text mt-auto">
+                        Securely holds your smartphone on the handlebars, giving you easy access to navigation, music, and calls while you ride.
+                    </p>
+                </div>
+                <img class="cardimg" src="/Images/PhoneMount.webp">
+            </div>
+
+            <div class="card shadow sm p-3 flex-fill d-flex flex-row br-15 mt-3">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">
+                        Smart Bike Lock
+                    </h5>
+                    <p class="card-text mt-auto">
+                       Keyless, app-controlled bike lock with anti-theft alerts and auto-lock features for maximum convenience and security.
+                    </p>
+                </div>
+                <img class="cardimg" src="/Images/BikeLock.webp">
+            </div>
+
+            
+            </div>
+        </div>
+    </div>
+
+<div class="card mt-3 shadow-sm p-3 flex-fill flex-column br-2">
+    <h2 class="card-title" id="Services">Services</h2>
+    <div class="card-body">
+         <div class="d-flex flex-wrap flex-row gap-3 justify-content-between">
+
+            <div class="card shadow sm p-3 flex-fill d-flex flex-column br-15 mt-3 flex-grow-1">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">
+                        Basic Tune-Up
+                    </h5>
+                    <p class="card-text mt-auto">
+                        A general maintenance service that includes brake and gear adjustments, tire inflation, chain lubrication, and a safety check to ensure the bike is functioning properly.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card shadow sm p-3 flex-fill d-flex flex-column br-15 mt-3 flex-grow-1">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">
+                        Flat Tire Repair
+                    </h5>
+                    <p class="card-text mt-auto">
+                        Quick and efficient repair or replacement of punctured inner tubes, along with a tire inspection to prevent future flats.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card shadow sm p-3 flex-fill d-flex flex-column br-15 mt-3 flex-grow-1">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">
+                        Brake and Gear Adjustment
+                    </h5>
+                    <p class="card-text mt-auto">
+                        Fine-tuning of braking and shifting systems to ensure smooth, safe, and responsive performance during rides.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card shadow sm p-3 flex-fill d-flex flex-column br-15 mt-3 flex-grow-1">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">
+                        Bike Cleaning and Detailing
+                    </h5>
+                    <p class="card-text mt-auto">
+                        A thorough cleaning of the frame, drivetrain, and wheels to remove dirt and grime, helping improve performance and extend the bike’s lifespan.
+                    </p>
+                </div>
+            </div>
+
+         </div>
+    </div>
+</div>
+
+<div class="card mt-3 shadow-sm p-3 flex-fill flex-column br-2">
+    <h2 class="card-title" id="BuyNow">Buy Now</h2>
+    <div class="container d-flex justify-content-center">
+        <div class="col-md-6">
+            <form asp-action="SubmitForm" asp-controller="Home" method="post">
+                <div style="margin: 15px;">
+                    <input class="form-control w-300" asp-for="Name" placeholder="Name"/>
+                </div>
+                <div style="margin: 15px;">
+                    <input class="form-control w-300" asp-for="Email" placeholder="Email"/>
+                </div>
+                <div style="margin: 15px;">
+                    <input class="form-control w-100" asp-for="PhoneNumber" placeholder="Phone Number"/>
+                </div>
+                <div  style="margin: 15px;">
+                    <textarea class="form-control w-100" asp-for="Inquiry" placeholder="Inquiry"></textarea>
+                </div>
+                <div class="text-center" style="margin: 15px;">
+                    <input type="submit" value="Submit" class="btn btn-primary px-4"></input>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
